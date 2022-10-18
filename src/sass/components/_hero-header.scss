@@ -25,6 +25,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 1200px) {
+    display: none;
+  }
+  
 }
 
 .burger-menu {
@@ -39,12 +43,12 @@ header {
 .burger-menu::before,
 .burger-menu::after {
   content: '';
-  background-color: $MainbackgroundColor;
+  // background-color: $MainbackgroundColor;
   position: absolute;
   width: 100%;
   height: 3px;
   left: 0;
-  transition: $animationTransition;
+  // transition: $animationTransition;
 }
 
 .burger-menu::before {
@@ -56,7 +60,7 @@ header {
 }
 
 .burger-menu .burger-menu__item {
-  background-color: $MainbackgroundColor;
+  // background-color: $MainbackgroundColor;
   position: absolute;
   width: 100%;
   height: 3px;
@@ -65,14 +69,14 @@ header {
 }
 
 .burger-menu.is-open::before {
-  background-color: $MainbackgroundColor;
+  // background-color: $MainbackgroundColor;
   transform: rotate(-45deg);
   top: 8px;
-  transition: $animationTransition;
+  // transition: $animationTransition;
 }
 
 .burger-menu.is-open::after {
-  background-color: $MainbackgroundColor;
+  // background-color: $MainbackgroundColor;
   transform: rotate(45deg);
   bottom: 5px;
 }
